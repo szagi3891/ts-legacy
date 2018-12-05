@@ -1,0 +1,22 @@
+{
+  "name": "ts-legacy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:szagi3891/ts-legacy.git",
+  "author": "Grzegorz Szeliga <szeligagrzegorz@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "rm-dist": "rm -Rf ./dist",
+    "build-dev": "yarn run rm-dist && webpack --config ./webpack.js --mode development",
+    "build-prod": "yarn run rm-dist && webpack --config ./webpack.js --mode production"
+  },
+  "devDependencies": {
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.2.1",
+    "webpack": "^4.27.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "awesome-typescript-loader": "^5.2.1"
+  }
+}
