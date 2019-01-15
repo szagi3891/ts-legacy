@@ -14,7 +14,10 @@ const makeConfig = (params) => {
 
     return {
         mode: 'development',
-        entry: path.join(dirname, params.entry),
+        entry: [
+            path.join(dirname, params.entry),
+            "@babel/polyfill"
+        ],
         output: {
             path: path.join(dirname, params.dist),
             publicPath: params.publicPath,
@@ -30,6 +33,14 @@ const makeConfig = (params) => {
                 {
                     test: /\.tsx?$/,
                     loader: "awesome-typescript-loader"
+                },
+                {
+                    test: /\.js$/,
+                    loader: 'babel-loader'
+                },
+                {
+                    test: /\.jsx$/,
+                    loader: 'babel-loader'
                 }
             ],
         },

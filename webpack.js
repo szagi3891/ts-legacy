@@ -8,7 +8,7 @@ module.exports = [
         dist: './dist/static',
         publicPath: '/static/',
         tsconfig: './tsconfig.json',
-        entry: './src/index.js',
+        entry: './src/index.jsx',
         outFileName: 'index.js'
     })
 ];
