@@ -5,7 +5,7 @@ const timeout = async (time: number) => {
 };
 
 export const sayHello = async () => {
-    console.info('Hello');
+    console.info('DrugiTS: Hello');
     await timeout(2000);
-    console.info('TS world');
+    console.info('DrugiTS: TS world');
 };
