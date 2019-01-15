@@ -15,8 +15,8 @@ const makeConfig = (params) => {
     return {
         mode: 'development',
         entry: [
-            path.join(dirname, params.entry),
-            "@babel/polyfill"
+            "@babel/polyfill",
+            path.join(dirname, params.entry)
         ],
         output: {
             path: path.join(dirname, params.dist),
