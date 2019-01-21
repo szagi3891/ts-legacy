@@ -54,3 +54,14 @@ const root = document.getElementById('root');
 if (root) {
     ReactDOM.render(<App />, document.getElementById('root'))
 }
+
+(() => {
+    const a = {
+        prop1: 'val1',
+    };
+    const b = {
+        prop2: 'val2',
+        ...a
+    };
+    console.info('Spred z JS', b);
+})();
