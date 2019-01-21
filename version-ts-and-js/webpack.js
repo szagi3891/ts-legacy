@@ -4,7 +4,7 @@ module.exports = [
     makeConfig({
         dirname: __dirname,
         mode: 'client',
-        src: './src',
+        src: '../src',
         dist: './dist/static',
         publicPath: '/static/',
         tsconfig: './tsconfig.json',
