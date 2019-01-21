@@ -1,0 +1,29 @@
+{
+  "name": "version-ts-in-babel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "rm-dist": "rm -Rf ./dist",
+    "build-dev": "yarn run rm-dist && webpack --config ./webpack.js --mode development && cp ./src/index.html ./dist/",
+    "build-prod": "yarn run rm-dist && webpack --config ./webpack.js --mode production  && cp ./src/index.html ./dist/",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn run type-check -- --watch"
+  },
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@babel/runtime": "^7.2.0",
+    "@types/react": "^16.7.20",
+    "@types/react-dom": "^16.0.11",
+    "babel-loader": "^8.0.5",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
+}
