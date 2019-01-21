@@ -8,7 +8,8 @@
     "build-dev": "yarn run rm-dist && webpack --config ./webpack.js --mode development && cp ./src/index.html ./dist/",
     "build-prod": "yarn run rm-dist && webpack --config ./webpack.js --mode production  && cp ./src/index.html ./dist/",
     "type-check": "tsc --noEmit",
-    "type-check:watch": "yarn run type-check -- --watch"
+    "type-check:watch": "yarn run type-check -- --watch",
+    "server": "http-server ./dist"
   },
   "dependencies": {
     "@babel/core": "^7.2.2",
@@ -21,8 +22,10 @@
     "@types/react": "^16.7.20",
     "@types/react-dom": "^16.0.11",
     "babel-loader": "^8.0.5",
+    "http-server": "^0.11.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "typescript": "^3.2.4",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1"
   }
