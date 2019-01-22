@@ -3,6 +3,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { sayHello } from './drugi';
+import { observable } from 'mobx';
+import { observer } from 'mobx-react';
 
 console.info('przywitujem się');
 
@@ -39,11 +41,26 @@ aa.hell();
     console.info('Tick5');
 })());
 
+@observer
 class App extends React.Component {
+    @observable counter = 0;
+
+    constructor(props) {
+        super(props);
+
+        //this.counter = 0;
+
+        setInterval(() => {
+            this.counter++;
+
+            console.info('Tick',  this.counter);
+        }, 1000);
+    }
+
     render() {
         return (
             <div>
-                To jest jakiś kawałek apki reaktowej
+                To jest jakiś kawałek apki reaktowej { this.counter }
             </div>
         );
     }
